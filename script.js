@@ -13,16 +13,33 @@ document.addEventListener("DOMContentLoaded", function () {
   window.board = Chessboard("board", config);
 
   function onDrop(source, target) {
-    // Attempt to make a move
-    var move = game.move({
-      from: source,
-      to: target,
-      promotion: "q", // NOTE: Always promote to a queen for simplicity
-    });
+    // Check if there's a next move in the history to compare with
+    if (moveIndex + 1 < window.game_history.length) {
+      var nextMove = window.game_history[moveIndex + 1];
 
-    // Illegal move
-    if (move === null) return "snapback";
-    else updateGameHistory(move);
+      // Construct the move string to compare with the history (e.g., "e2-e4")
+      var attemptedMove = source + "-" + target;
+
+      // Check if the attempted move matches the next move's source and target
+      if (nextMove.from === source && nextMove.to === target) {
+        // If the move is in history, attempt to make the move
+        var move = game.move({
+          from: source,
+          to: target,
+          promotion: "q", // Assuming promotion to queen for simplicity
+        });
+
+        // If move is successful, update history and board position
+        if (move) {
+          moveIndex++;
+          updateBoard();
+          return;
+        }
+      }
+    }
+
+    // If move is not in history or illegal, snap back
+    return "snapback";
   }
 
   function onSnapEnd() {
@@ -68,5 +85,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("prevBtn").addEventListener("click", prevMove);
   document.getElementById("flipBtn").addEventListener("click", function () {
     board.flip();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+      // Left arrow pressed
+      prevMove();
+    } else if (event.key === "ArrowRight") {
+      // Right arrow pressed
+      nextMove();
+    }
   });
 });
