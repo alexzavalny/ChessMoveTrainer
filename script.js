@@ -13,36 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
   window.board = Chessboard("board", config);
 
   function onDrop(source, target) {
-    // Check if there's a next move in the history to compare with
+    // Проверяем следующий ход в истории для сравнения
     if (moveIndex + 1 < window.game_history.length) {
       var nextMove = window.game_history[moveIndex + 1];
-
-      // Construct the move string to compare with the history (e.g., "e2-e4")
       var attemptedMove = source + "-" + target;
 
-      // Check if the attempted move matches the next move's source and target
       if (nextMove.from === source && nextMove.to === target) {
-        // If the move is in history, attempt to make the move
         var move = game.move({
           from: source,
           to: target,
-          promotion: "q", // Assuming promotion to queen for simplicity
+          promotion: "q", // Автоматическое продвижение в ферзи
         });
 
-        // If move is successful, update history and board position
         if (move) {
           moveIndex++;
           updateBoard();
           setTimeout(function () {
             autoPlayNextMove();
-          }, 500); // Add a slight delay for the automatic move
-
+          }, 500);
           return;
         }
       }
     }
-
-    // If move is not in history or illegal, snap back
     return "snapback";
   }
 
@@ -50,13 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (moveIndex < window.game_history.length - 1) {
       moveIndex++;
       var nextMove = window.game_history[moveIndex];
-      game.move(nextMove.san); // Execute the next move automatically
+      game.move(nextMove.san);
       updateBoard();
     }
   }
 
   function onSnapEnd() {
-    // Update the board position to reflect the game's state
     board.position(game.fen());
   }
 
@@ -65,12 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
   game.load_pgn(pgn);
   window.game_history = game.history({ verbose: true });
   game.reset();
-  window.moveIndex = -1; // Adjusted for zero-based indexing of history
+  window.moveIndex = -1;
 
   function updateGameHistory(move) {
-    // This function updates the history and move index after a manual move
     window.game_history = game.history({ verbose: true });
-    moveIndex = window.game_history.length - 1; // Update to the latest move
+    moveIndex = window.game_history.length - 1;
   }
 
   function updateBoard() {
@@ -80,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function nextMove() {
     if (moveIndex < window.game_history.length - 1) {
       moveIndex++;
-      game.move(window.game_history[moveIndex].san); // Move forward in history
+      game.move(window.game_history[moveIndex].san);
       updateBoard();
     }
   }
 
   function prevMove() {
     if (moveIndex >= 0) {
-      game.undo(); // Undo the move
+      game.undo();
       moveIndex--;
       updateBoard();
     }
@@ -101,10 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowLeft") {
-      // Left arrow pressed
       prevMove();
     } else if (event.key === "ArrowRight") {
-      // Right arrow pressed
       nextMove();
     }
   });
@@ -112,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("gameList").addEventListener("change", function () {
     const selectedOption = this.options[this.selectedIndex];
     const filePath = selectedOption.value;
-    const playFor = selectedOption.getAttribute("data-play-for");
 
     if (filePath) {
       fetch(filePath)
@@ -121,33 +108,55 @@ document.addEventListener("DOMContentLoaded", function () {
           game.load_pgn(pgn);
           window.game_history = game.history({ verbose: true });
           game.reset();
-          window.moveIndex = -1; // Adjusted for zero-based indexing of history
+          window.moveIndex = -1;
           board.position(game.fen());
-
-          // Check if the player is playing as black and adjust accordingly
-          if (playFor === "black") {
-            if (board.orientation() !== "black") {
-              board.flip();
-            }
-            autoPlayNextMove(); // Make the first move automatically if playing for black
-          } else if (board.orientation() !== "white") {
-            // Ensure the board is correctly oriented for playing as white
-            board.flip();
-          }
         });
     }
   });
 
+  // Загрузка и фильтрация игр по тегам
   fetch("studies.json")
     .then((response) => response.json())
     .then((games) => {
       const gameList = document.getElementById("gameList");
+      const tagSet = new Set(["all"]); // Для уникальных тегов
+
       games.forEach((game) => {
         const option = document.createElement("option");
         option.value = game.file;
         option.textContent = game.name;
-        option.setAttribute("data-play-for", game.play_for); // Add play_for data to the option
+        option.setAttribute("data-play-for", game.play_for);
         gameList.appendChild(option);
+
+        game.tags.forEach((tag) => tagSet.add(tag));
+      });
+
+      const tagList = document.getElementById("tagList");
+      tagSet.forEach((tag) => {
+        const option = document.createElement("option");
+        option.value = tag;
+        option.textContent = tag;
+        tagList.appendChild(option);
       });
     });
+
+  document.getElementById("tagList").addEventListener("change", function () {
+    const selectedTag = this.value;
+    fetch("studies.json")
+      .then((response) => response.json())
+      .then((games) => {
+        const gameList = document.getElementById("gameList");
+        gameList.innerHTML = "<option>Select a game...</option>";
+
+        games.forEach((game) => {
+          if (selectedTag === "all" || game.tags.includes(selectedTag)) {
+            const option = document.createElement("option");
+            option.value = game.file;
+            option.textContent = game.name;
+            option.setAttribute("data-play-for", game.play_for);
+            gameList.appendChild(option);
+          }
+        });
+      });
+  });
 });

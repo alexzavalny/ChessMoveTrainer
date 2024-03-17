@@ -2,56 +2,67 @@
   {
     "name": "Против Итальянской",
     "file": "pgns/against_italian.pgn",
-    "play_for": "black"
+    "play_for": "black",
+    "tags": ["открытие", "итальянская партия", "чёрные"]
   },
   {
     "name": "Мат Легаля",
     "file": "pgns/mat_legalja.pgn",
-    "play_for": "white"
+    "play_for": "white",
+    "tags": ["мат", "легаль", "белые", "ловушка"]
   },
   {
     "name": "Гамбит эванса",
     "file": "pgns/gambit_evansa.pgn",
-    "play_for": "white"
+    "play_for": "white",
+    "tags": ["гамбит", "эванс", "белые", "атака"]
   },
   {
     "name": "Стэффорд - On no my queen",
     "file": "pgns/stafford/oh_no_my_queen.pgn",
-    "play_for": "black"
+    "play_for": "black",
+    "tags": ["стэффорд", "гамбит", "чёрные", "стратегия"]
   },
   {
     "name": "Стэффорд - Knight c3",
     "file": "pgns/stafford/knight-c3.pgn",
-    "play_for": "black"
+    "play_for": "black",
+    "tags": ["стэффорд", "конь c3", "чёрные", "открытие"]
   },
   {
     "name": "Стэффорд - e5",
     "file": "pgns/stafford/e5.pgn",
-    "play_for": "black"
+    "play_for": "black",
+    "tags": ["стэффорд", "e5", "чёрные", "центральное продвижение"]
   },
   {
     "name": "Стэффорд - e5-2",
     "file": "pgns/stafford/e5-2.pgn",
-    "play_for": "black"
+    "play_for": "black",
+    "tags": ["стэффорд", "e5", "чёрные", "вариация"]
   },
   {
     "name": "Стэффорд - e5-d4",
     "file": "pgns/stafford/e5-d4.pgn",
-    "play_for": "black"
+    "play_for": "black",
+    "tags": ["стэффорд", "e5-d4", "чёрные", "вариация", "центр"]
   },
   {
     "name": "Жареная печенка - вариация 1",
     "file": "pgns/fried-liver/variation-1.pgn",
-    "play_for": "white"
+    "play_for": "white",
+    "tags": ["жареная печенка", "атака", "белые", "вариация"]
   },
   {
     "name": "Против Каро Канн - Ботез",
     "file": "pgns/against_caro_kann_botez.pgn",
-    "play_for": "white"
+    "play_for": "white",
+    "tags": ["каро-канн", "ботез", "белые", "открытие"]
   },
   {
     "name": "Против Каро Канн - Ботез A6",
     "file": "pgns/against_caro_kann_a6.pgn",
-    "play_for": "white"
+    "play_for": "white",
+    "tags": ["каро-канн", "ботез", "а6", "белые", "стратегия"]
   }
 ]
