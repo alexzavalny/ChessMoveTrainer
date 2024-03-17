@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("gameList").addEventListener("change", function () {
     const selectedOption = this.options[this.selectedIndex];
+    const playFor = selectedOption.getAttribute("data-play-for"); // Получаем play_for из выбранной опции
     const filePath = selectedOption.value;
 
     if (filePath) {
@@ -110,6 +111,17 @@ document.addEventListener("DOMContentLoaded", function () {
           game.reset();
           window.moveIndex = -1;
           board.position(game.fen());
+
+          // Проверяем, играем ли мы за черных, и если да, то переворачиваем доску
+          if (playFor === "black") {
+            if (board.orientation() !== "black") {
+              board.flip();
+            }
+            autoPlayNextMove(); // Сделать первый ход автоматически, если играешь за черных
+          } else if (playFor === "white" && board.orientation() !== "white") {
+            // Убедиться, что доска ориентирована правильно для игры белыми
+            board.flip();
+          }
         });
     }
   });
