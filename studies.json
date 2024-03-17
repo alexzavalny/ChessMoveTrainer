@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Game 1",
+    "file": "pgns/game1.pgn"
+  },
+  {
+    "name": "Мат Легаля",
+    "file": "pgns/mat_legalja.pgn"
+  }
+]

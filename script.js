@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (move) {
           moveIndex++;
           updateBoard();
+          setTimeout(function () {
+            autoPlayNextMove();
+          }, 500); // Add a slight delay for the automatic move
+
           return;
         }
       }
@@ -42,13 +46,21 @@ document.addEventListener("DOMContentLoaded", function () {
     return "snapback";
   }
 
+  function autoPlayNextMove() {
+    if (moveIndex < window.game_history.length - 1) {
+      moveIndex++;
+      var nextMove = window.game_history[moveIndex];
+      game.move(nextMove.san); // Execute the next move automatically
+      updateBoard();
+    }
+  }
+
   function onSnapEnd() {
     // Update the board position to reflect the game's state
     board.position(game.fen());
   }
 
-  window.pgn =
-    "1. e4 e5 2. Nf3 Nc6 3. Bc4 { This is italian game, popular responses are Bc5 and Nc6, but black plays: } 3... Nd4 { Blackburne Shilling Gambit is a trap, and white are forced captured, but white is ambitious, and plays: } 4. Nxe5? Qg5 { Double attack! the correct move is O-O, but white is ambitious } { [%csl Ge5,Gg2,Rg1][%cal Gg5e5,Gg5g2,Re1g1] } 5. Nxf7?? { [%csl Gg5,Gh8][%cal Gf7g5,Gf7h8] } 5... Qxg2! { [%csl Gh1][%cal Gg2h1] } 6. Rf1 { Black wins With: } 6... Qxe4+!! 7. Be2 (7. Qe2 Nxe2 (7... Nf3+ 8. Kd1) 8. Bxe2) 7... Nf3# $17 *";
+  window.pgn = "";
 
   game.load_pgn(pgn);
   window.game_history = game.history({ verbose: true });
@@ -96,4 +108,31 @@ document.addEventListener("DOMContentLoaded", function () {
       nextMove();
     }
   });
+
+  document.getElementById("gameList").addEventListener("change", function () {
+    const filePath = this.value;
+    if (filePath) {
+      fetch(filePath)
+        .then((response) => response.text())
+        .then((pgn) => {
+          game.load_pgn(pgn);
+          window.game_history = game.history({ verbose: true });
+          game.reset();
+          window.moveIndex = -1;
+          board.position(game.fen());
+        });
+    }
+  });
+
+  fetch("studies.json")
+    .then((response) => response.json())
+    .then((games) => {
+      const gameList = document.getElementById("gameList");
+      games.forEach((game) => {
+        const option = document.createElement("option");
+        option.value = game.file;
+        option.textContent = game.name;
+        gameList.appendChild(option);
+      });
+    });
 });

@@ -1,0 +1,11 @@
+[Event "7 opening traps: 4th trap"]
+[Site "https://lichess.org/study/fuN36RM6/ImPf8JWI"]
+[Result "*"]
+[Variant "Standard"]
+[ECO "C50"]
+[Opening "Italian Game: Paris Defense"]
+[Annotator "https://lichess.org/@/miguelcnardelli"]
+[UTCDate "2024.02.28"]
+[UTCTime "23:58:48"]
+
+1. e4 e5 2. Nf3 Nc6 (2... d6 { Philidor defense! } 3. Bc4 Nc6 4. Nc3 Bg4 { igual variation }) 3. Bc4 { Italian } 3... d6 4. Nc3 Bg4 { [%csl Rd1][%cal Rg4d1] } 5. Nxe5!! { [%csl Gd1][%cal Gg4d1] } 5... Bxd1 6. Bxf7+ Ke7 7. Nd5# { This is legal trap } *
