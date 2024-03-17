@@ -1,10 +1,57 @@
 [
   {
-    "name": "Game 1",
-    "file": "pgns/game1.pgn"
+    "name": "Против Итальянской",
+    "file": "pgns/against_italian.pgn",
+    "play_for": "black"
   },
   {
     "name": "Мат Легаля",
-    "file": "pgns/mat_legalja.pgn"
+    "file": "pgns/mat_legalja.pgn",
+    "play_for": "white"
+  },
+  {
+    "name": "Гамбит эванса",
+    "file": "pgns/gambit_evansa.pgn",
+    "play_for": "white"
+  },
+  {
+    "name": "Стэффорд - On no my queen",
+    "file": "pgns/stafford/oh_no_my_queen.pgn",
+    "play_for": "black"
+  },
+  {
+    "name": "Стэффорд - Knight c3",
+    "file": "pgns/stafford/knight-c3.pgn",
+    "play_for": "black"
+  },
+  {
+    "name": "Стэффорд - e5",
+    "file": "pgns/stafford/e5.pgn",
+    "play_for": "black"
+  },
+  {
+    "name": "Стэффорд - e5-2",
+    "file": "pgns/stafford/e5-2.pgn",
+    "play_for": "black"
+  },
+  {
+    "name": "Стэффорд - e5-d4",
+    "file": "pgns/stafford/e5-d4.pgn",
+    "play_for": "black"
+  },
+  {
+    "name": "Жареная печенка - вариация 1",
+    "file": "pgns/fried-liver/variation-1.pgn",
+    "play_for": "white"
+  },
+  {
+    "name": "Против Каро Канн - Ботез",
+    "file": "pgns/against_caro_kann_botez.pgn",
+    "play_for": "white"
+  },
+  {
+    "name": "Против Каро Канн - Ботез A6",
+    "file": "pgns/against_caro_kann_a6.pgn",
+    "play_for": "white"
   }
 ]

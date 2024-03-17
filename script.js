@@ -110,7 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("gameList").addEventListener("change", function () {
-    const filePath = this.value;
+    const selectedOption = this.options[this.selectedIndex];
+    const filePath = selectedOption.value;
+    const playFor = selectedOption.getAttribute("data-play-for");
+
     if (filePath) {
       fetch(filePath)
         .then((response) => response.text())
@@ -118,8 +121,19 @@ document.addEventListener("DOMContentLoaded", function () {
           game.load_pgn(pgn);
           window.game_history = game.history({ verbose: true });
           game.reset();
-          window.moveIndex = -1;
+          window.moveIndex = -1; // Adjusted for zero-based indexing of history
           board.position(game.fen());
+
+          // Check if the player is playing as black and adjust accordingly
+          if (playFor === "black") {
+            if (board.orientation() !== "black") {
+              board.flip();
+            }
+            autoPlayNextMove(); // Make the first move automatically if playing for black
+          } else if (board.orientation() !== "white") {
+            // Ensure the board is correctly oriented for playing as white
+            board.flip();
+          }
         });
     }
   });
@@ -132,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const option = document.createElement("option");
         option.value = game.file;
         option.textContent = game.name;
+        option.setAttribute("data-play-for", game.play_for); // Add play_for data to the option
         gameList.appendChild(option);
       });
     });
