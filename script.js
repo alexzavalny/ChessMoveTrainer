@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (move) {
           moveIndex++;
-          updateBoard();
+          //updateBoard();
           setTimeout(function () {
             autoPlayNextMove();
           }, 500);
@@ -44,6 +44,44 @@ document.addEventListener("DOMContentLoaded", function () {
       var nextMove = window.game_history[moveIndex];
       game.move(nextMove.san);
       updateBoard();
+    }
+  }
+
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    // Сброс игры и индекса хода к начальному состоянию
+    game.reset();
+    window.moveIndex = -1;
+
+    // Загрузка PGN текущей выбранной игры, если таковая имеется
+    const selectedGameOption =
+      document.getElementById("gameList").selectedOptions[0];
+    const filePath = selectedGameOption.value;
+    const playFor = selectedGameOption.getAttribute("data-play-for");
+
+    if (filePath) {
+      fetch(filePath)
+        .then((response) => response.text())
+        .then((pgn) => {
+          game.load_pgn(pgn);
+          window.game_history = game.history({ verbose: true });
+          game.reset();
+          window.moveIndex = -1;
+          updateBoard();
+
+          // Адаптация ориентации доски в соответствии с playFor
+          adjustBoardOrientation(playFor);
+        });
+    } else {
+      updateBoard();
+    }
+  });
+
+  function adjustBoardOrientation(playFor) {
+    const currentOrientation = board.orientation();
+    if (playFor === "black" && currentOrientation !== "black") {
+      board.flip();
+    } else if (playFor === "white" && currentOrientation !== "white") {
+      board.flip();
     }
   }
 
