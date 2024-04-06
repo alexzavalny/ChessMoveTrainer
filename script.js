@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Загрузка и фильтрация игр по тегам
-  fetch("studies.json")
+  fetch("studies.json?" + new Date().getTime())
     .then((response) => response.json())
     .then((games) => {
       const gameList = document.getElementById("gameList");
