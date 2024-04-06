@@ -64,5 +64,17 @@
     "file": "pgns/against_caro_kann_a6.pgn",
     "play_for": "white",
     "tags": ["каро-канн", "ботез", "а6", "белые", "стратегия"]
+  },
+  {
+    "name": "Гамбит Гаваша - d6",
+    "file": "pgns/gavash/d6.pgn",
+    "play_for": "white",
+    "tags": ["гамбит", "гаваш"]
+  },
+  {
+    "name": "Райдерский Гамбит - Ловушка Холозара",
+    "file": "pgns/ryder/holozar.pgn",
+    "play_for": "white",
+    "tags": ["гамбит", "гайдерский", "ловушка", "холозар"]
   }
 ]
