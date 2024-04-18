@@ -1,86 +1,92 @@
 [
   {
+    "id": 1,
     "name": "Против Итальянской",
-    "file": "pgns/against_italian.pgn",
+    "lines": ["pgns/against_italian.pgn"],
     "play_for": "black",
-    "tags": ["открытие", "итальянская партия"]
+    "tags": ["итальянская партия"]
   },
   {
+    "id": 2,
     "name": "Мат Легаля",
-    "file": "pgns/mat_legalja.pgn",
+    "lines": ["pgns/mat_legalja.pgn"],
     "play_for": "white",
-    "tags": ["мат", "легаль", "ловушка"]
+    "tags": ["мат", "легаль"]
   },
   {
+    "id": 3,
     "name": "Гамбит эванса",
-    "file": "pgns/gambit_evansa.pgn",
+    "lines": ["pgns/gambit_evansa.pgn"],
     "play_for": "white",
     "tags": ["гамбит", "эванс"]
   },
   {
-    "name": "Стэффорд - On no my queen",
-    "file": "pgns/stafford/oh_no_my_queen.pgn",
+    "id": 4,
+    "name": "Стэффорд",
+    "lines": [
+      "pgns/stafford/oh_no_my_queen.pgn",
+      "pgns/stafford/knight-c3.pgn",
+      "pgns/stafford/e5.pgn",
+      "pgns/stafford/e5-2.pgn",
+      "pgns/stafford/e5-d4.pgn"
+    ],
     "play_for": "black",
     "tags": ["стэффорд", "гамбит"]
   },
   {
-    "name": "Стэффорд - Knight c3",
-    "file": "pgns/stafford/knight-c3.pgn",
-    "play_for": "black",
-    "tags": ["стэффорд"]
-  },
-  {
-    "name": "Стэффорд - e5",
-    "file": "pgns/stafford/e5.pgn",
-    "play_for": "black",
-    "tags": ["стэффорд"]
-  },
-  {
-    "name": "Стэффорд - e5-2",
-    "file": "pgns/stafford/e5-2.pgn",
-    "play_for": "black",
-    "tags": ["стэффорд"]
-  },
-  {
-    "name": "Стэффорд - e5-d4",
-    "file": "pgns/stafford/e5-d4.pgn",
-    "play_for": "black",
-    "tags": ["стэффорд"]
-  },
-  {
-    "name": "Жареная печенка - вариация 1",
-    "file": "pgns/fried-liver/variation-1.pgn",
+    "id": 5,
+    "name": "Жареная печенка",
+    "lines": ["pgns/fried-liver/variation-1.pgn"],
     "play_for": "white",
     "tags": ["жареная печенка"]
   },
   {
+    "id": 6,
     "name": "Против Каро Канн - Ботез",
-    "file": "pgns/against_caro_kann_botez.pgn",
     "play_for": "white",
-    "tags": ["каро-канн", "ботез"]
+    "tags": ["каро-канн", "ботез"],
+    "lines": [
+      "pgns/against_caro_kann_botez.pgn",
+      "pgns/against_caro_kann_a6.pgn"
+    ]
   },
   {
-    "name": "Против Каро Канн - Ботез A6",
-    "file": "pgns/against_caro_kann_a6.pgn",
-    "play_for": "white",
-    "tags": ["каро-канн", "ботез"]
-  },
-  {
+    "id": 7,
     "name": "Гамбит Гаваша - d6",
-    "file": "pgns/gavash/d6.pgn",
+    "lines": ["pgns/gavash/d6.pgn"],
     "play_for": "white",
     "tags": ["гамбит", "гаваш"]
   },
   {
-    "name": "Райдерский Гамбит - Ловушка Холозара",
-    "file": "pgns/ryder/holozar.pgn",
+    "id": 8,
+    "name": "Райдерский Гамбит",
     "play_for": "white",
-    "tags": ["гамбит", "гайдерский", "ловушка", "холозар"]
+    "tags": ["гамбит", "райдерский", "холозар"],
+    "lines": ["pgns/ryder/holozar.pgn", "pgns/ryder/holozar-2.pgn"]
   },
   {
-    "name": "Райдерский Гамбит - Ловушка Холозара 2",
-    "file": "pgns/ryder/holozar-2.pgn",
-    "play_for": "white",
-    "tags": ["гамбит", "гайдерский", "ловушка", "холозар"]
+    "id": 9,
+    "name": "Чарлик",
+    "play_for": "black",
+    "tags": ["чарлик"],
+    "lines": [
+      "pgns/charlik/line1.pgn",
+      "pgns/charlik/line2.pgn",
+      "pgns/charlik/line3.pgn",
+      "pgns/charlik/line4.pgn",
+      "pgns/charlik/line5.pgn",
+      "pgns/charlik/line6.pgn",
+      "pgns/charlik/line7.pgn",
+      "pgns/charlik/line8.pgn",
+      "pgns/charlik/line9.pgn",
+      "pgns/charlik/line10.pgn",
+      "pgns/charlik/line11.pgn",
+      "pgns/charlik/line12.pgn",
+      "pgns/charlik/line13.pgn",
+      "pgns/charlik/line14.pgn",
+      "pgns/charlik/line15.pgn",
+      "pgns/charlik/line16.pgn",
+      "pgns/charlik/line17.pgn"
+    ]
   }
 ]
