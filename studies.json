@@ -86,7 +86,22 @@
       "pgns/charlik/line14.pgn",
       "pgns/charlik/line15.pgn",
       "pgns/charlik/line16.pgn",
-      "pgns/charlik/line17.pgn"
+      "pgns/charlik/line17.pgn",
+      "pgns/charlik/line18.pgn",
+      "pgns/charlik/line19.pgn",
+      "pgns/charlik/line20.pgn",
+      "pgns/charlik/line21.pgn",
+      "pgns/charlik/line22.pgn",
+      "pgns/charlik/line23.pgn",
+      "pgns/charlik/line24.pgn",
+      "pgns/charlik/line25.pgn"
     ]
+  },
+  {
+    "id": 10,
+    "name": "Ловушка Энглунда",
+    "play_for": "black",
+    "tags": ["энглунд", "ловушка"],
+    "lines": ["pgns/lovushka_englunda.pgn"]
   }
 ]
