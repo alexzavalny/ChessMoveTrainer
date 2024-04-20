@@ -2,58 +2,56 @@
   {
     "id": 1,
     "name": "Против Итальянской",
-    "lines": ["pgns/against_italian.pgn"],
+    "folder": "against_italian",
+    "lines": 1,
     "play_for": "black",
     "tags": ["итальянская партия"]
   },
   {
     "id": 2,
     "name": "Мат Легаля",
-    "lines": ["pgns/mat_legalja.pgn"],
+    "folder": "mat_legalja",
+    "lines": 1,
     "play_for": "white",
     "tags": ["мат", "легаль"]
   },
   {
     "id": 3,
     "name": "Гамбит эванса",
-    "lines": ["pgns/gambit_evansa.pgn"],
+    "folder": "gambit_evansa",
+    "lines": 1,
     "play_for": "white",
     "tags": ["гамбит", "эванс"]
   },
   {
     "id": 4,
     "name": "Стэффорд",
-    "lines": [
-      "pgns/stafford/oh_no_my_queen.pgn",
-      "pgns/stafford/knight-c3.pgn",
-      "pgns/stafford/e5.pgn",
-      "pgns/stafford/e5-2.pgn",
-      "pgns/stafford/e5-d4.pgn"
-    ],
+    "folder": "stafford",
+    "lines": 5,
     "play_for": "black",
     "tags": ["стэффорд", "гамбит"]
   },
   {
     "id": 5,
     "name": "Жареная печенка",
-    "lines": ["pgns/fried-liver/variation-1.pgn"],
+    "folder": "fried-liver",
+    "lines": 1,
     "play_for": "white",
     "tags": ["жареная печенка"]
   },
   {
     "id": 6,
     "name": "Против Каро Канн - Ботез",
+    "folder": "against_caro_kann",
     "play_for": "white",
     "tags": ["каро-канн", "ботез"],
-    "lines": [
-      "pgns/against_caro_kann_botez.pgn",
-      "pgns/against_caro_kann_a6.pgn"
-    ]
+    "lines": 2
   },
   {
     "id": 7,
     "name": "Гамбит Гаваша - d6",
-    "lines": ["pgns/gavash/d6.pgn"],
+    "folder": "gavash",
+    "lines": 1,
     "play_for": "white",
     "tags": ["гамбит", "гаваш"]
   },
@@ -61,47 +59,32 @@
     "id": 8,
     "name": "Райдерский Гамбит",
     "play_for": "white",
+    "folder": "ryder",
     "tags": ["гамбит", "райдерский", "холозар"],
-    "lines": ["pgns/ryder/holozar.pgn", "pgns/ryder/holozar-2.pgn"]
+    "lines": 2
   },
   {
     "id": 9,
     "name": "Чарлик",
     "play_for": "black",
     "tags": ["чарлик"],
-    "lines": [
-      "pgns/charlik/line1.pgn",
-      "pgns/charlik/line2.pgn",
-      "pgns/charlik/line3.pgn",
-      "pgns/charlik/line4.pgn",
-      "pgns/charlik/line5.pgn",
-      "pgns/charlik/line6.pgn",
-      "pgns/charlik/line7.pgn",
-      "pgns/charlik/line8.pgn",
-      "pgns/charlik/line9.pgn",
-      "pgns/charlik/line10.pgn",
-      "pgns/charlik/line11.pgn",
-      "pgns/charlik/line12.pgn",
-      "pgns/charlik/line13.pgn",
-      "pgns/charlik/line14.pgn",
-      "pgns/charlik/line15.pgn",
-      "pgns/charlik/line16.pgn",
-      "pgns/charlik/line17.pgn",
-      "pgns/charlik/line18.pgn",
-      "pgns/charlik/line19.pgn",
-      "pgns/charlik/line20.pgn",
-      "pgns/charlik/line21.pgn",
-      "pgns/charlik/line22.pgn",
-      "pgns/charlik/line23.pgn",
-      "pgns/charlik/line24.pgn",
-      "pgns/charlik/line25.pgn"
-    ]
+    "folder": "charlik",
+    "lines": 25
   },
   {
     "id": 10,
     "name": "Ловушка Энглунда",
     "play_for": "black",
     "tags": ["энглунд", "ловушка"],
-    "lines": ["pgns/lovushka_englunda.pgn"]
+    "folder": "lovushka_englunda",
+    "lines": 1
+  },
+  {
+    "id": 11,
+    "name": "Гамбит Блэкмара-Димера",
+    "play_for": "white",
+    "tags": ["гамбит", "блэкмар-димер"],
+    "folder": "blackmar",
+    "lines": 10
   }
 ]

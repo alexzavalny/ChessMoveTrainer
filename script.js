@@ -47,6 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // on nextLineBtn click, trigger selecting next line from line dropdown
+  document.getElementById("nextLineBtn").addEventListener("click", function () {
+    const lineList = document.getElementById("lineList");
+    const selectedIndex = lineList.selectedIndex;
+    if (selectedIndex < lineList.options.length - 1) {
+      lineList.selectedIndex = selectedIndex + 1;
+      lineList.dispatchEvent(new Event("change"));
+    }
+  });
+
   document.getElementById("resetBtn").addEventListener("click", function () {
     // Сброс игры и индекса хода к начальному состоянию
     game.reset();
@@ -244,14 +254,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // заполняем список линий (lineList select) для выбранной игры
     lineList.innerHTML = "";
     var index = 0;
-    selectedGame.lines.forEach((line) => {
+
+    var lines = Array.from({ length: selectedGame.lines }, (_, i) => i + 1);
+    lines.forEach((line) => {
+      const lineCode = `Line${++index}`;
       const option = document.createElement("option");
-      option.value = line;
-      option.textContent = `Line ${++index}`;
+      option.value = "pgns/" + selectedGame.folder + "/" + lineCode + ".pgn";
+      option.textContent = lineCode;
       lineList.appendChild(option);
     });
 
-    loadFilePath(selectedGame.lines[0]);
+    loadFilePath("pgns/" + selectedGame.folder + "/Line1.pgn");
   });
 
   window.games = [];
