@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
       lineList.appendChild(option);
     });
 
-    loadFilePath("pgns/" + selectedGame.folder + "/Line1.pgn");
+    loadFilePath("pgns/" + selectedGame.folder + "/line1.pgn");
   });
 
   window.games = [];
