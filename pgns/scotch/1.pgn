@@ -1,0 +1,60 @@
+1. e4 e5 2. Nf3 Nc6 3. d4 d6 4. dxe5 dxe5 5. Qxd8+ Nxd8 6. Nxe5 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 Nf6 6. e5 Nh5 7. g4 {
+[%csl Gh5] } *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Bc5 5. Nb3 Bb6 6. Nc3 Nf6 7. Qe2 O-O
+8. Be3 { [%cal Ge1c1] } 8... d6 9. O-O-O Be6 10. f3 Bxe3+ 11. Qxe3 a5 12.
+a4 Bxb3 13. cxb3 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Bb5 Nxe4 6. O-O Be7 7. Nf5
+O-O 8. Qg4 Bf6 9. Qxe4 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Bb5 Bc5 6. Nb3 { [%csl
+Gc5][%cal Gb3c5] } 6... Bb6 7. Nc3 O-O 8. Bg5 d6 9. O-O h6 10. Bh4 Ne5 11.
+Kh1 Ng6 12. Bg3 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nf6 5. Bb5 Nxe4 6. O-O Be7 7. Nf5
+O-O 8. Qg4 Ng5 { [%csl Gg7][%cal Gg4g7] } 9. Nxe7+ *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Be7 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. Bg5
+Be7 8. O-O-O O-O 9. f3 Rb8 10. g4 a6 11. h4 b5 { [%cal Gg4g5] } 12. h5 {
+[%csl Gg5][%cal Gg4g5,Gg5g6] } *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. Be3
+Ng4 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. f3 {
+[%csl Gg4][%cal Gf6g4] } 7... Be7 8. Be3 O-O 9. O-O-O a6 10. g4 b5 11. h4
+Be6 { [%csl Gh4] } 12. g5 { [%csl Gg5] } 12... Nh5 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. f3 {
+[%csl Gg4][%cal Gf6g4] } 7... Be7 8. Be3 O-O 9. O-O-O a6 10. g4 b5 11. h4
+Be6 { [%csl Gh4] } 12. h5 Rb8 13. g5 Ne8 14. g6 fxg6 { [%csl Gg6][%cal
+Gf7g6] } 15. hxg6 h6 { [%csl Gh6] } 16. Bxh6 gxh6 17. Rxh6 Bg5+ *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. f3 {
+[%csl Gg4][%cal Gf6g4] } 7... Be7 8. Be3 O-O 9. O-O-O a6 10. g4 b5 11. h4
+Be6 { [%csl Gh4] } 12. h5 Rb8 13. g5 Nd7 14. h6 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. f3 {
+[%csl Gg4][%cal Gf6g4] } 7... Be7 8. Be3 O-O 9. O-O-O a6 10. g4 b5 11. h4
+Be6 { [%csl Gh4] } 12. h5 Rb8 13. g5 Ne8 14. h6 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 d6 6. Nc3 Nf6 7. f3 {
+[%csl Gg4][%cal Gf6g4] } 7... Be7 8. Be3 O-O 9. O-O-O a6 10. g4 b5 11. h4
+Be6 { [%csl Gh4] } 12. h5 Rb8 13. g5 Ne8 14. g6 fxg6 { [%csl Gg6][%cal
+Gf7g6] } 15. hxg6 h6 { [%csl Gh6] } 16. Kb1 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 Nf6 6. e5 Ng8 7. Nc3 g6
+8. e6 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 exd4 4. Nxd4 Nxd4 5. Qxd4 Nf6 6. e5 Ng8 7. Nc3 g6
+8. h4 Bg7 9. Bc4 Ne7 10. Bg5 O-O 11. Nd5 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 d6 4. d5 Nce7 5. Nc3 Ng6 *
+
+1. e4 e5 2. Nf3 Nc6 3. d4 d6 4. dxe5 dxe5 5. Qxd8+ Kxd8 *
+
