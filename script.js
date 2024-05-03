@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var lines = Array.from({ length: selectedGame.lines }, (_, i) => i + 1);
     lines.forEach((line) => {
-      const lineCode = `Line${++index}`;
+      const lineCode = `line${++index}`;
       const option = document.createElement("option");
       option.value = "pgns/" + selectedGame.folder + "/" + lineCode + ".pgn";
       option.textContent = lineCode;
