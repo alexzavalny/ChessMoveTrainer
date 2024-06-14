@@ -72,14 +72,6 @@
     "lines": 25
   },
   {
-    "id": 10,
-    "name": "Ловушка Энглунда",
-    "play_for": "black",
-    "tags": ["энглунд", "ловушка"],
-    "folder": "lovushka_englunda",
-    "lines": 1
-  },
-  {
     "id": 11,
     "name": "Гамбит Блэкмара-Димера",
     "play_for": "white",
