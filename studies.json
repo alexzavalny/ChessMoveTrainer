@@ -94,5 +94,13 @@
     "tags": ["шотландская партия"],
     "folder": "scotch",
     "lines": 18
+  },
+  {
+    "id": 13,
+    "name": "Джобава Лондон",
+    "play_for": "white",
+    "tags": ["джобава"],
+    "folder": "jobava",
+    "lines": 10
   }
 ]
